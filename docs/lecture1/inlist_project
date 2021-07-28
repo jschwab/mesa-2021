@@ -1,0 +1,61 @@
+! MESA Summer School 2021: Lecture 1
+
+&star_job
+  ! see star/defaults/star_job.defaults
+
+  ! begin with a pre-built model
+  load_saved_model = .true.
+  saved_model_name = '1M_at_1Rsun.mod'
+
+  ! reset initial model number
+  ! (leave the initial age along)
+  set_initial_model_number = .true.
+  initial_model_number = 0
+
+  ! display on-screen plots
+  pgstar_flag = .true.
+
+  ! pause just before MESA exits
+  pause_before_terminate = .true.
+
+/ ! end of star_job namelist
+
+
+&eos
+  ! equation-of-state options
+  ! see eos/defaults/eos.defaults
+
+/ ! end of eos namelist
+
+
+&kap
+  ! opacity options
+  ! see kap/defaults/kap.defaults
+
+  use_Type2_opacities = .true.
+  Zbase = 0.02
+
+/ ! end of kap namelist
+
+
+&controls
+  ! see star/defaults/controls.defaults
+
+  ! starting specifications
+  ! (unused since loading a saved model)
+  initial_mass = 1.0 ! in Msun units
+  initial_z = 0.02 ! solar(-ish) metallicity
+
+  ! options for energy conservation (see MESA V, Section 3)
+  use_dedt_form_of_energy_eqn = .true.
+
+  ! stop when the center mass fraction of h1 drops below this limit
+  xa_central_lower_limit_species(1) = 'h1'
+  xa_central_lower_limit(1) = 1d-2
+
+  ! select output frequency
+  photo_interval = 10
+  write_header_frequency = 2
+  terminal_interval = 5
+
+/ ! end of controls namelist
