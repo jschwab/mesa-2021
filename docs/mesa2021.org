@@ -20,7 +20,7 @@ your classmates and the TAs for help!
 There is a version of this document available with [[file:solutions.html][solutions]].
 * Part 1: Navigating MESA and its modules
 ** Part 1a: The modules
-MESA (Modules for Experiments in Stellar Astrophysics) is composed of modules.  These are collections of Fortran that serve a common purpose.  When you list the contents of ~$MESA_DIR~, most of the subdirectories that you see are modules.
+MESA (Modules for Experiments in Stellar Astrophysics) is composed of modules.  These are collections of Fortran files that serve a common purpose.  When you list the contents of ~$MESA_DIR~, most of the subdirectories that you see are modules.
 
 [[file:ls-mesa-dir.png]]
 
@@ -67,7 +67,7 @@ Search for (and read around) the lines defining ~standard_cgrav~ and ~mu_sun~ an
 
 * Part 2: Running and controlling MESA
 If you've used MESA before, much of this should be familiar.
-** Part 1a: Getting started
+** Part 2a: Getting started
 Each time you want to start a MESA project, you should make a new copy
 of the ~star/work~ directory.
 #+BEGIN_EXAMPLE
@@ -79,7 +79,7 @@ you. [[file:lecture1.zip][Download]], unpack, and enter this work directory.
   unzip lecture1.zip
   cd lecture1
 #+END_EXAMPLE
-*** Task 1: Compile and run the provided work directory
+*** Task 2: Compile and run the provided work directory
 This directory evolves a solar mass star from the middle of the main
 sequence to hydrogen exhaustion. Confirm that you can compile and run
 it.  A window with a few plots should appear.  Familiarize yourself
@@ -110,7 +110,7 @@ If no photo is specified, i.e.,
 #+END_EXAMPLE
 then MESA restarts from the most recent photo (based on filesystem modification time).
 
-** Part 1b: Using inlists
+** Part 2b: Using inlists
 MESA/star currently has five inlist sections.  Each section contains the
 options for a different aspect of MESA.
 + star_job :: options for the program that evolves the star
@@ -158,7 +158,7 @@ Note that inlists can point to other inlists.  This can be useful for
 keeping things organized.  In the ~lecture1~ directory, ~inlist~
 points MESA to ~inlist_project~ and ~inlist_pgstar~.
 
-*** Task 2: Read the documentation
+*** Task 3: Read the documentation
 Use the documentation to learn about the stopping condition that we
 are using (~xa_central_lower_limit~ and
 ~xa_central_lower_limit_species~).  Look near this option to see some
@@ -182,7 +182,7 @@ contains the lower limit value.
 Nearby you will find similar controls with upper/lower limits on
 average and surface mass fractions.
 
-** Part 1c: Controlling output
+** Part 2c: Controlling output
 MESA already knows how to output a tremendous amount of information.
 The two key file types are *history* files, which store the value of
 scalar quantities (e.g., mass, luminosity) at different timesteps and
@@ -213,7 +213,7 @@ of interest ('!' is the comment character.)
 
 You can use ~run_star_extras.f90~ to define your own columns and headers
 in your history and profile files.  We will discuss this later today.
-*** Task 3: Add some output
+*** Task 4: Add some output
 Look at ~LOGS/history.data~ and ~LOGS/profile1.data~ to see what
 header and column information is included by default.  In our later
 exercises, we will be setting the variable ~extra_heat~, which is an
@@ -353,6 +353,9 @@ run, written in Fortran-ish pseudocode.
 #+END_SRC
 
 In even more distilled terms, here is a [[file:flowchart.pdf][flowchart]] summarizing this.
+The blank rectangles on the right represent that you can use the
+indicated hooks to insert your own code to be executed by MESA at
+these times.
 
 [[file:flowchart.pdf][file:flowchart.png]]
 
@@ -374,7 +377,7 @@ that is being evolved.  By convention, the variable name ~s~ is used
 throughout ~run_star_extras.f90~ to refer to this structure.  In
 Fortran, the percent (%) operator is used to access the components of
 the structure.  (So you can read ~s% x = 3~ in the same way that you
-would read ~s.x = 3~ in C.)
+would read ~s.x = 3~ in C or Python.)
 
 The ~star_info~ structure contains the stellar model itself (i.e.,
 zoning information, thermodynamic profile, composition profile).
@@ -412,8 +415,8 @@ the line ~use const_def~, you can already access these definitions.
 Using the built-in constants lets you make sure you're using exactly
 the same definitions as MESA.
 
-** Part 2a: Monitoring your models
-*** Task 1 (Example): Add a stopping condition
+** Part 3a: Monitoring your models
+*** Task 5 (Example): Add a stopping condition
 If you assume that the Earth is a perfect blackbody, its equilibrium
 temperature is given by
 
@@ -497,7 +500,7 @@ Now start the model again from the beginning
 #+END_EXAMPLE
 This run should halt around step 74.
 
-** Part 2b: Changing input physics
+** Part 3b: Changing input physics
 MESA provides hooks to override or modify many of its built-in
 routines.  (These routines mostly affect things that occur within
 "take step" box of the flowchart.) These are referred to as "other"
@@ -575,7 +578,7 @@ can see that the file tells us how to have MESA use our other_*
 routine.  Perform these steps (hint: you will need to edit both your
 ~run_star_extras.f90~ and your inlists).
 
-*** Task 2: Add an extra energy source in the core of the star
+*** Task 6: Add an extra energy source in the core of the star
 Use the ~other_energy~ routine to add a heating term
 
 \begin{equation*}
@@ -648,7 +651,7 @@ people encounter when using the other_* hooks.
 
   end subroutine lecture1_other_energy
 #+END_SRC
-** Part 2c: Analyzing your models 
+** Part 3c: Analyzing your models 
 It is often useful to do some of your analysis in ~run_star_extras~.
 At runtime, you have access to more information about the star than
 will be in the history and profile files.  Additionally, by allowing
@@ -657,7 +660,7 @@ make your MESA output smaller and your subsequent analysis easier.
 (This is particularly useful if you are running large sets of MESA
 models.)
 
-*** Task 3: Compare the extra heating to nuclear heating
+*** Task 7: Compare the extra heating to nuclear heating
 Calculate the local ratio of your extra heating rate to the nuclear
 energy generation rate (~eps_nuc~) and add this quantity your MESA
 output.
