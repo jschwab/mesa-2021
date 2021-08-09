@@ -642,7 +642,7 @@ people encounter when using the other_* hooks.
        ! so the mass coordinate at the middle of the cell is 
        Mr = s% m(k) - 0.5 * s% dm(k)
 
-       s% extra_heat(k) = L_extra * exp_cr(-Mr/delta_M) / delta_M
+       s% extra_heat(k) = L_extra * exp(-Mr/delta_M) / delta_M
     end do
 
     ! output rate at which energy is added
