@@ -383,7 +383,7 @@ The ~star_info~ structure contains the stellar model itself (i.e.,
 zoning information, thermodynamic profile, composition profile).
 The ~star_data~ module contains the definition of the ~star_info~
 structure and more specifically, these components are listed in the file
-~$MESA_DIR/star/public/star_data.inc~.  In addition, ~star_info~
+~$MESA_DIR/star_data/public/star_data.inc~.  In addition, ~star_info~
 contains the values for the parameters that you set in your ~controls~
 inlist (i.e., ~initial_mass~, ~xa_central_lower_limit~).
 
@@ -436,7 +436,7 @@ is called after each step, which is ~extras_finish_step~.
 
 Now, I need to figure out how to access information about the
 conditions at the stellar photosphere.  I open up
-~star/public/star_data.inc~ and start looking around.  If I search for
+~star_data/public/star_data.inc~ and start looking around.  If I search for
 the word photosphere, I can find what I'm looking for ~photosphere_r~
 and ~Teff~.
 
@@ -678,7 +678,7 @@ the function
 #+END_SRC
 The subroutine ~data_for_extra_profile_columns~ already has access to
 the star_info pointer, so you can make use of any of the quantities
-defined in ~$MESA_DIR/star/public/star_data.inc~.  This includes ~s%
+defined in ~$MESA_DIR/star_data/public/star_data.inc~.  This includes ~s%
 eps_nuc~ and the ~s% extra_heat~ you defined earlier.
 
 The desired ratio can then be calculated in each zone.

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-09 Mon 06:40 -->
+<!-- 2021-08-09 Mon 07:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>MESA Summer School 2021: Lecture 1</title>
@@ -252,78 +252,78 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org475f076">Part 0: Overview</a></li>
-<li><a href="#org76ace4f">Part 1: Navigating MESA and its modules</a>
+<li><a href="#org44833c3">Part 0: Overview</a></li>
+<li><a href="#orgf2aa1fe">Part 1: Navigating MESA and its modules</a>
 <ul>
-<li><a href="#orgb07a282">Part 1a: The modules</a></li>
-<li><a href="#org90a791b">Part 1b: The documentation</a></li>
-<li><a href="#org5b3f8c7">Part 1c: The source code</a></li>
-<li><a href="#org3b6aee0">Part 1d: Putting it all together</a>
+<li><a href="#orgc2c2e9f">Part 1a: The modules</a></li>
+<li><a href="#orgba4af62">Part 1b: The documentation</a></li>
+<li><a href="#org7ffe696">Part 1c: The source code</a></li>
+<li><a href="#org183fbc1">Part 1d: Putting it all together</a>
 <ul>
-<li><a href="#orgcfd9aa6">Task 1: What is the definition of the solar mass?</a>
+<li><a href="#org484df68">Task 1: What is the definition of the solar mass?</a>
 <ul>
-<li><a href="#org1b25a84">Answer</a></li>
+<li><a href="#org9d28df6">Answer</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgc301639">Part 2: Running and controlling MESA</a>
+<li><a href="#org5ae0347">Part 2: Running and controlling MESA</a>
 <ul>
-<li><a href="#orgf4841e2">Part 2a: Getting started</a>
+<li><a href="#orga56eec4">Part 2a: Getting started</a>
 <ul>
-<li><a href="#org61f4bd9">Task 2: Compile and run the provided work directory</a>
+<li><a href="#org57f7327">Task 2: Compile and run the provided work directory</a>
 <ul>
-<li><a href="#orged694ed">Answer</a></li>
-<li><a href="#org827bbca">Bonus Answer</a></li>
+<li><a href="#org2ce1323">Answer</a></li>
+<li><a href="#org232868e">Bonus Answer</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org17399c8">Part 2b: Using inlists</a>
+<li><a href="#org28e502e">Part 2b: Using inlists</a>
 <ul>
-<li><a href="#org42665d2">Task 3: Read the documentation</a>
+<li><a href="#orgd553620">Task 3: Read the documentation</a>
 <ul>
-<li><a href="#org616545b">Answer</a></li>
+<li><a href="#orgb6afcc0">Answer</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgfc0dd3f">Part 2c: Controlling output</a>
+<li><a href="#org6cb7527">Part 2c: Controlling output</a>
 <ul>
-<li><a href="#orga39ded3">Task 4: Add some output</a>
+<li><a href="#orga3778c3">Task 4: Add some output</a>
 <ul>
-<li><a href="#org8b37446">Answer</a></li>
-<li><a href="#org1450bce">Bonus Answer</a></li>
+<li><a href="#org9b3df84">Answer</a></li>
+<li><a href="#orgf5404b3">Bonus Answer</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org0df3758">Part 3: Using run_star_extras.f90</a>
+<li><a href="#org0f32179">Part 3: Using run_star_extras.f90</a>
 <ul>
-<li><a href="#orged37272">Part 3a: Monitoring your models</a>
+<li><a href="#org251d45e">Part 3a: Monitoring your models</a>
 <ul>
-<li><a href="#orgb46ef4a">Task 5 (Example): Add a stopping condition</a></li>
+<li><a href="#org847dc3c">Task 5 (Example): Add a stopping condition</a></li>
 </ul>
 </li>
-<li><a href="#org1687d3d">Part 3b: Changing input physics</a>
+<li><a href="#org19401c6">Part 3b: Changing input physics</a>
 <ul>
-<li><a href="#orgfd0675f">Task 6: Add an extra energy source in the core of the star</a>
+<li><a href="#org417d2fb">Task 6: Add an extra energy source in the core of the star</a>
 <ul>
-<li><a href="#org5b6703e">Answer</a></li>
+<li><a href="#orgd86d70e">Answer</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org3b7fec1">Part 3c: Analyzing your models</a>
+<li><a href="#org840a317">Part 3c: Analyzing your models</a>
 <ul>
-<li><a href="#orgcf9eb38">Task 7: Compare the extra heating to nuclear heating</a>
+<li><a href="#org299000e">Task 7: Compare the extra heating to nuclear heating</a>
 <ul>
-<li><a href="#orgeff6d04">Answer</a></li>
-<li><a href="#org77999b1">Bonus Answer</a></li>
+<li><a href="#orge27bc32">Answer</a></li>
+<li><a href="#org8cdf869">Bonus Answer</a></li>
 </ul>
 </li>
 </ul>
@@ -333,9 +333,9 @@
 </ul>
 </div>
 </div>
-<div id="outline-container-org475f076" class="outline-2">
-<h2 id="org475f076">Part 0: Overview</h2>
-<div class="outline-text-2" id="text-org475f076">
+<div id="outline-container-org44833c3" class="outline-2">
+<h2 id="org44833c3">Part 0: Overview</h2>
+<div class="outline-text-2" id="text-org44833c3">
 <p>
 This guide was written as part of the 2021 MESA summer school.  It is
 an introduction to MESA, with a particular focus on learning how to
@@ -355,19 +355,19 @@ There is a version of this document available with <a href="solutions.html">solu
 </p>
 </div>
 </div>
-<div id="outline-container-org76ace4f" class="outline-2">
-<h2 id="org76ace4f">Part 1: Navigating MESA and its modules</h2>
-<div class="outline-text-2" id="text-org76ace4f">
+<div id="outline-container-orgf2aa1fe" class="outline-2">
+<h2 id="orgf2aa1fe">Part 1: Navigating MESA and its modules</h2>
+<div class="outline-text-2" id="text-orgf2aa1fe">
 </div>
-<div id="outline-container-orgb07a282" class="outline-3">
-<h3 id="orgb07a282">Part 1a: The modules</h3>
-<div class="outline-text-3" id="text-orgb07a282">
+<div id="outline-container-orgc2c2e9f" class="outline-3">
+<h3 id="orgc2c2e9f">Part 1a: The modules</h3>
+<div class="outline-text-3" id="text-orgc2c2e9f">
 <p>
 MESA (Modules for Experiments in Stellar Astrophysics) is composed of modules.  These are collections of Fortran files that serve a common purpose.  When you list the contents of <code>$MESA_DIR</code>, most of the subdirectories that you see are modules.
 </p>
 
 
-<div id="orgbecaec6" class="figure">
+<div id="orgf239201" class="figure">
 <p><img src="ls-mesa-dir.png" alt="ls-mesa-dir.png" />
 </p>
 </div>
@@ -386,9 +386,9 @@ Finally, some modules like <code>star</code> (also <code>astero</code> and <code
 </div>
 </div>
 
-<div id="outline-container-org90a791b" class="outline-3">
-<h3 id="org90a791b">Part 1b: The documentation</h3>
-<div class="outline-text-3" id="text-org90a791b">
+<div id="outline-container-orgba4af62" class="outline-3">
+<h3 id="orgba4af62">Part 1b: The documentation</h3>
+<div class="outline-text-3" id="text-orgba4af62">
 <p>
 MESA now has documentation that lives in the source tree (<code>$MESA_DIR/docs</code>) and is version controlled along with the rest of MESA.  This documentation is hosted online by ReadTheDocs and is available at <a href="https://docs.mesastar.org/">https://docs.mesastar.org/</a>.  Bookmark this site and spend some time getting familiar with what it contains!  For example, there is <a href="https://docs.mesastar.org/en/r15140/modules.html#constants-const">a page summarizing the MESA modules</a>.
 </p>
@@ -402,16 +402,16 @@ The documentation is versioned.  Right now, there are only two versions: r15140 
 </p>
 
 
-<div id="org46b23e8" class="figure">
+<div id="org1d70a80" class="figure">
 <p><img src="version-selector.png" alt="version-selector.png" />
 </p>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org5b3f8c7" class="outline-3">
-<h3 id="org5b3f8c7">Part 1c: The source code</h3>
-<div class="outline-text-3" id="text-org5b3f8c7">
+<div id="outline-container-org7ffe696" class="outline-3">
+<h3 id="org7ffe696">Part 1c: The source code</h3>
+<div class="outline-text-3" id="text-org7ffe696">
 <p>
 MESA has hundreds of thousands of lines of code, so when you want to learn how something works, finding the relevant code can be a challenge.  This will get easier as you get familiar with the layout and structure of MESA, but it is also worth investing some time in general techniques for searching through source code.
 </p>
@@ -426,23 +426,23 @@ For example, if you execute the command <code>grep -rI Josiah *</code> while in 
 </div>
 </div>
 
-<div id="outline-container-org3b6aee0" class="outline-3">
-<h3 id="org3b6aee0">Part 1d: Putting it all together</h3>
-<div class="outline-text-3" id="text-org3b6aee0">
+<div id="outline-container-org183fbc1" class="outline-3">
+<h3 id="org183fbc1">Part 1d: Putting it all together</h3>
+<div class="outline-text-3" id="text-org183fbc1">
 <p>
 Answering your own questions about how MESA works often requires a mixture of the documentation and source code detective work.  The documentation can give you a high-level overview or a hint about where else to look, but the source code is what has the details and is ultimately the "truth".
 </p>
 </div>
-<div id="outline-container-orgcfd9aa6" class="outline-4">
-<h4 id="orgcfd9aa6">Task 1: What is the definition of the solar mass?</h4>
-<div class="outline-text-4" id="text-orgcfd9aa6">
+<div id="outline-container-org484df68" class="outline-4">
+<h4 id="org484df68">Task 1: What is the definition of the solar mass?</h4>
+<div class="outline-text-4" id="text-org484df68">
 <p>
 Find the value of the solar mass (in grams) used in MESA and explain where it comes from and how it is calculated.
 </p>
 </div>
-<div id="outline-container-org1b25a84" class="outline-5">
-<h5 id="org1b25a84">Answer</h5>
-<div class="outline-text-5" id="text-org1b25a84">
+<div id="outline-container-org9d28df6" class="outline-5">
+<h5 id="org9d28df6">Answer</h5>
+<div class="outline-text-5" id="text-org9d28df6">
 <p>
 Use the documentation to figure out what module might contain code related to the solar mass.  The <a href="https://docs.mesastar.org/en/r15140/modules.html#constants-const">module documentation for const</a> describes it as containing astronomical constants (e.g., Msun), so that's where to start.
 </p>
@@ -451,7 +451,7 @@ Use the documentation to figure out what module might contain code related to th
 Navigate to the <code>const</code> directory (<code>$MESA_DIR/const</code>).  To find where in the source code the definition occurs, grep for the string 'solar mass'.
 </p>
 
-<pre class="example" id="org78ad5f8">
+<pre class="example" id="orgbf2c2f6">
 $ grep -rI 'solar mass' *
 
 public/const_def.f90:      real(dp), parameter :: Msun = mu_sun / standard_cgrav ! solar mass (g); gravitational mass, not baryonic
@@ -470,35 +470,35 @@ Search for (and read around) the lines defining <code>standard_cgrav</code> and 
 </div>
 </div>
 
-<div id="outline-container-orgc301639" class="outline-2">
-<h2 id="orgc301639">Part 2: Running and controlling MESA</h2>
-<div class="outline-text-2" id="text-orgc301639">
+<div id="outline-container-org5ae0347" class="outline-2">
+<h2 id="org5ae0347">Part 2: Running and controlling MESA</h2>
+<div class="outline-text-2" id="text-org5ae0347">
 <p>
 If you've used MESA before, much of this should be familiar.
 </p>
 </div>
-<div id="outline-container-orgf4841e2" class="outline-3">
-<h3 id="orgf4841e2">Part 2a: Getting started</h3>
-<div class="outline-text-3" id="text-orgf4841e2">
+<div id="outline-container-orga56eec4" class="outline-3">
+<h3 id="orga56eec4">Part 2a: Getting started</h3>
+<div class="outline-text-3" id="text-orga56eec4">
 <p>
 Each time you want to start a MESA project, you should make a new copy
 of the <code>star/work</code> directory.
 </p>
-<pre class="example" id="orgd248a45">
+<pre class="example" id="org56c6f53">
 cp -r $MESA_DIR/star/work my_new_project
 </pre>
 <p>
 In this case, we have prepared and provided a work directory for
 you. <a href="lecture1.zip">Download</a>, unpack, and enter this work directory.
 </p>
-<pre class="example" id="orgb25b51e">
+<pre class="example" id="orged59f97">
 unzip lecture1.zip
 cd lecture1
 </pre>
 </div>
-<div id="outline-container-org61f4bd9" class="outline-4">
-<h4 id="org61f4bd9">Task 2: Compile and run the provided work directory</h4>
-<div class="outline-text-4" id="text-org61f4bd9">
+<div id="outline-container-org57f7327" class="outline-4">
+<h4 id="org57f7327">Task 2: Compile and run the provided work directory</h4>
+<div class="outline-text-4" id="text-org57f7327">
 <p>
 This directory evolves a solar mass star from the middle of the main
 sequence to hydrogen exhaustion. Confirm that you can compile and run
@@ -511,23 +511,23 @@ You can receive valuable MESA bonus points by restarting your run.
 </p>
 </div>
 
-<div id="outline-container-orged694ed" class="outline-5">
-<h5 id="orged694ed">Answer</h5>
-<div class="outline-text-5" id="text-orged694ed">
-<pre class="example" id="org10d6ab2">
+<div id="outline-container-org2ce1323" class="outline-5">
+<h5 id="org2ce1323">Answer</h5>
+<div class="outline-text-5" id="text-org2ce1323">
+<pre class="example" id="org5c3300e">
 ./clean
 ./mk
 ./rn
 </pre>
 </div>
 </div>
-<div id="outline-container-org827bbca" class="outline-5">
-<h5 id="org827bbca">Bonus Answer</h5>
-<div class="outline-text-5" id="text-org827bbca">
+<div id="outline-container-org232868e" class="outline-5">
+<h5 id="org232868e">Bonus Answer</h5>
+<div class="outline-text-5" id="text-org232868e">
 <p>
 During your run, lines line
 </p>
-<pre class="example" id="org44c720b">
+<pre class="example" id="org1eee7bf">
 save photos/x390 for model 390
 </pre>
 <p>
@@ -537,13 +537,13 @@ were output to the terminal.  These photos are MESA restart files.
 <p>
 To restart, use the <code>re</code> script and specify the name of the photo.
 </p>
-<pre class="example" id="org8407992">
+<pre class="example" id="org8fc8c8a">
 ./re x390
 </pre>
 <p>
 If no photo is specified, i.e.,
 </p>
-<pre class="example" id="org540ada5">
+<pre class="example" id="org93f993d">
 ./re
 </pre>
 <p>
@@ -554,9 +554,9 @@ then MESA restarts from the most recent photo (based on filesystem modification 
 </div>
 </div>
 
-<div id="outline-container-org17399c8" class="outline-3">
-<h3 id="org17399c8">Part 2b: Using inlists</h3>
-<div class="outline-text-3" id="text-org17399c8">
+<div id="outline-container-org28e502e" class="outline-3">
+<h3 id="org28e502e">Part 2b: Using inlists</h3>
+<div class="outline-text-3" id="text-org28e502e">
 <p>
 MESA/star currently has five inlist sections.  Each section contains the
 options for a different aspect of MESA.
@@ -641,9 +641,9 @@ points MESA to <code>inlist_project</code> and <code>inlist_pgstar</code>.
 </p>
 </div>
 
-<div id="outline-container-org42665d2" class="outline-4">
-<h4 id="org42665d2">Task 3: Read the documentation</h4>
-<div class="outline-text-4" id="text-org42665d2">
+<div id="outline-container-orgd553620" class="outline-4">
+<h4 id="orgd553620">Task 3: Read the documentation</h4>
+<div class="outline-text-4" id="text-orgd553620">
 <p>
 Use the documentation to learn about the stopping condition that we
 are using (<code>xa_central_lower_limit</code> and
@@ -653,9 +653,9 @@ available.
 </p>
 </div>
 
-<div id="outline-container-org616545b" class="outline-5">
-<h5 id="org616545b">Answer</h5>
-<div class="outline-text-5" id="text-org616545b">
+<div id="outline-container-orgb6afcc0" class="outline-5">
+<h5 id="orgb6afcc0">Answer</h5>
+<div class="outline-text-5" id="text-orgb6afcc0">
 <p>
 Look at the version of controls.defaults on the web or included in
 MESA.  You should consult the documentation appropriate to your
@@ -684,9 +684,9 @@ average and surface mass fractions.
 </div>
 </div>
 
-<div id="outline-container-orgfc0dd3f" class="outline-3">
-<h3 id="orgfc0dd3f">Part 2c: Controlling output</h3>
-<div class="outline-text-3" id="text-orgfc0dd3f">
+<div id="outline-container-org6cb7527" class="outline-3">
+<h3 id="org6cb7527">Part 2c: Controlling output</h3>
+<div class="outline-text-3" id="text-org6cb7527">
 <p>
 MESA already knows how to output a tremendous amount of information.
 The two key file types are <b>history</b> files, which store the value of
@@ -707,7 +707,7 @@ the pressure in each cell).
 The contents of MESA's output files is not directly controlled via
 inlists.  The default output is set by the files
 </p>
-<pre class="example" id="org12387a6">
+<pre class="example" id="orgce0ac23">
 $MESA_DIR/star/defaults/history_columns.list
 $MESA_DIR/star/defaults/profile_columns.list
 </pre>
@@ -715,7 +715,7 @@ $MESA_DIR/star/defaults/profile_columns.list
 In order to customize the output, you copy these files to your
 work directory.
 </p>
-<pre class="example" id="org65e433d">
+<pre class="example" id="org4b5401d">
 cp $MESA_DIR/star/defaults/history_columns.list .
 cp $MESA_DIR/star/defaults/profile_columns.list .
 </pre>
@@ -730,9 +730,9 @@ You can use <code>run_star_extras.f90</code> to define your own columns and head
 in your history and profile files.  We will discuss this later today.
 </p>
 </div>
-<div id="outline-container-orga39ded3" class="outline-4">
-<h4 id="orga39ded3">Task 4: Add some output</h4>
-<div class="outline-text-4" id="text-orga39ded3">
+<div id="outline-container-orga3778c3" class="outline-4">
+<h4 id="orga3778c3">Task 4: Add some output</h4>
+<div class="outline-text-4" id="text-orga3778c3">
 <p>
 Look at <code>LOGS/history.data</code> and <code>LOGS/profile1.data</code> to see what
 header and column information is included by default.  In our later
@@ -748,30 +748,30 @@ amount of extra heat being added to the star in your output.
 </p>
 </div>
 
-<div id="outline-container-org8b37446" class="outline-5">
-<h5 id="org8b37446">Answer</h5>
-<div class="outline-text-5" id="text-org8b37446">
+<div id="outline-container-org9b3df84" class="outline-5">
+<h5 id="org9b3df84">Answer</h5>
+<div class="outline-text-5" id="text-org9b3df84">
 <p>
 Uncomment the following lines in <code>profile_columns.list</code>
 </p>
-<pre class="example" id="org34b704d">
+<pre class="example" id="org59702d3">
 extra_heat
 </pre>
 <p>
 and then run MESA
 </p>
-<pre class="example" id="orge4d3ee1">
+<pre class="example" id="org5468a36">
 ./rn
 </pre>
 </div>
 </div>
-<div id="outline-container-org1450bce" class="outline-5">
-<h5 id="org1450bce">Bonus Answer</h5>
-<div class="outline-text-5" id="text-org1450bce">
+<div id="outline-container-orgf5404b3" class="outline-5">
+<h5 id="orgf5404b3">Bonus Answer</h5>
+<div class="outline-text-5" id="text-orgf5404b3">
 <p>
 Uncomment the following lines in <code>history_columns.list</code>
 </p>
-<pre class="example" id="org19807d3">
+<pre class="example" id="org4319eb6">
 extra_L
 </pre>
 </div>
@@ -781,9 +781,9 @@ extra_L
 </div>
 
 
-<div id="outline-container-org0df3758" class="outline-2">
-<h2 id="org0df3758">Part 3: Using run_star_extras.f90</h2>
-<div class="outline-text-2" id="text-org0df3758">
+<div id="outline-container-org0f32179" class="outline-2">
+<h2 id="org0f32179">Part 3: Using run_star_extras.f90</h2>
+<div class="outline-text-2" id="text-org0f32179">
 <p>
 To activate <code>run_star_extras.f90</code>, navigate to the <code>lecture1/src</code>
 directory and open <code>run_star_extras.f90</code> in your text editor of choice.
@@ -811,7 +811,7 @@ insert the contents of a file in emacs is C-x i &lt;filename&gt;, in vim is
 <p>
 Before we make any changes, we should check that the code compiles.
 </p>
-<pre class="example" id="org00ab7a4">
+<pre class="example" id="org386e044">
 cd ..
 ./mk
 </pre>
@@ -919,7 +919,7 @@ these times.
 </p>
 
 
-<div id="orgd778bdc" class="figure">
+<div id="orgd5970f5" class="figure">
 <p><a href="flowchart.pdf"><img src="flowchart.png" alt="flowchart.png" /></a>
 </p>
 </div>
@@ -959,7 +959,7 @@ The <code>star_info</code> structure contains the stellar model itself (i.e.,
 zoning information, thermodynamic profile, composition profile).
 The <code>star_data</code> module contains the definition of the <code>star_info</code>
 structure and more specifically, these components are listed in the file
-<code>$MESA_DIR/star/public/star_data.inc</code>.  In addition, <code>star_info</code>
+<code>$MESA_DIR/star_data/public/star_data.inc</code>.  In addition, <code>star_info</code>
 contains the values for the parameters that you set in your <code>controls</code>
 inlist (i.e., <code>initial_mass</code>, <code>xa_central_lower_limit</code>).
 </p>
@@ -1004,13 +1004,13 @@ the same definitions as MESA.
 </p>
 </div>
 
-<div id="outline-container-orged37272" class="outline-3">
-<h3 id="orged37272">Part 3a: Monitoring your models</h3>
-<div class="outline-text-3" id="text-orged37272">
+<div id="outline-container-org251d45e" class="outline-3">
+<h3 id="org251d45e">Part 3a: Monitoring your models</h3>
+<div class="outline-text-3" id="text-org251d45e">
 </div>
-<div id="outline-container-orgb46ef4a" class="outline-4">
-<h4 id="orgb46ef4a">Task 5 (Example): Add a stopping condition</h4>
-<div class="outline-text-4" id="text-orgb46ef4a">
+<div id="outline-container-org847dc3c" class="outline-4">
+<h4 id="org847dc3c">Task 5 (Example): Add a stopping condition</h4>
+<div class="outline-text-4" id="text-org847dc3c">
 <p>
 If you assume that the Earth is a perfect blackbody, its equilibrium
 temperature is given by
@@ -1037,7 +1037,7 @@ is called after each step, which is <code>extras_finish_step</code>.
 <p>
 Now, I need to figure out how to access information about the
 conditions at the stellar photosphere.  I open up
-<code>star/public/star_data.inc</code> and start looking around.  If I search for
+<code>star_data/public/star_data.inc</code> and start looking around.  If I search for
 the word photosphere, I can find what I'm looking for <code>photosphere_r</code>
 and <code>Teff</code>.
 </p>
@@ -1099,7 +1099,7 @@ inlist, comment out the H-depletion stopping condition.)
 <p>
 Now, recompile your working directory
 </p>
-<pre class="example" id="org9e879b5">
+<pre class="example" id="org78a082c">
 ./mk
 </pre>
 <p>
@@ -1111,7 +1111,7 @@ inlist files.)
 <p>
 Now start the model again from the beginning
 </p>
-<pre class="example" id="orgc28b4b7">
+<pre class="example" id="org8e34241">
 ./rn
 </pre>
 <p>
@@ -1121,9 +1121,9 @@ This run should halt around step 74.
 </div>
 </div>
 
-<div id="outline-container-org1687d3d" class="outline-3">
-<h3 id="org1687d3d">Part 3b: Changing input physics</h3>
-<div class="outline-text-3" id="text-org1687d3d">
+<div id="outline-container-org19401c6" class="outline-3">
+<h3 id="org19401c6">Part 3b: Changing input physics</h3>
+<div class="outline-text-3" id="text-org19401c6">
 <p>
 MESA provides hooks to override or modify many of its built-in
 routines.  (These routines mostly affect things that occur within
@@ -1218,9 +1218,9 @@ routine.  Perform these steps (hint: you will need to edit both your
 </p>
 </div>
 
-<div id="outline-container-orgfd0675f" class="outline-4">
-<h4 id="orgfd0675f">Task 6: Add an extra energy source in the core of the star</h4>
-<div class="outline-text-4" id="text-orgfd0675f">
+<div id="outline-container-org417d2fb" class="outline-4">
+<h4 id="org417d2fb">Task 6: Add an extra energy source in the core of the star</h4>
+<div class="outline-text-4" id="text-org417d2fb">
 <p>
 Use the <code>other_energy</code> routine to add a heating term
 </p>
@@ -1245,9 +1245,9 @@ user-specified values of \(\Delta M\) and \(L_{\mathrm{extra}}\).
 </p>
 </div>
 
-<div id="outline-container-org5b6703e" class="outline-5">
-<h5 id="org5b6703e">Answer</h5>
-<div class="outline-text-5" id="text-org5b6703e">
+<div id="outline-container-orgd86d70e" class="outline-5">
+<h5 id="orgd86d70e">Answer</h5>
+<div class="outline-text-5" id="text-orgd86d70e">
 <p>
 First, edit the controls section of your inlist to set the appropriate
 use_other_* flag to <code>.true.</code> .  In our example, this means adding the
@@ -1317,9 +1317,9 @@ people encounter when using the other_* hooks.
 </div>
 </div>
 </div>
-<div id="outline-container-org3b7fec1" class="outline-3">
-<h3 id="org3b7fec1">Part 3c: Analyzing your models</h3>
-<div class="outline-text-3" id="text-org3b7fec1">
+<div id="outline-container-org840a317" class="outline-3">
+<h3 id="org840a317">Part 3c: Analyzing your models</h3>
+<div class="outline-text-3" id="text-org840a317">
 <p>
 It is often useful to do some of your analysis in <code>run_star_extras</code>.
 At runtime, you have access to more information about the star than
@@ -1331,9 +1331,9 @@ models.)
 </p>
 </div>
 
-<div id="outline-container-orgcf9eb38" class="outline-4">
-<h4 id="orgcf9eb38">Task 7: Compare the extra heating to nuclear heating</h4>
-<div class="outline-text-4" id="text-orgcf9eb38">
+<div id="outline-container-org299000e" class="outline-4">
+<h4 id="org299000e">Task 7: Compare the extra heating to nuclear heating</h4>
+<div class="outline-text-4" id="text-org299000e">
 <p>
 Calculate the local ratio of your extra heating rate to the nuclear
 energy generation rate (<code>eps_nuc</code>) and add this quantity your MESA
@@ -1345,9 +1345,9 @@ You can receive valuable MESA bonus points by adding this quantity to
 the existing PGSTAR plot window.
 </p>
 </div>
-<div id="outline-container-orgeff6d04" class="outline-5">
-<h5 id="orgeff6d04">Answer</h5>
-<div class="outline-text-5" id="text-orgeff6d04">
+<div id="outline-container-orge27bc32" class="outline-5">
+<h5 id="orge27bc32">Answer</h5>
+<div class="outline-text-5" id="text-orge27bc32">
 <p>
 First, indicate that you will add an extra profile column by editing
 the function
@@ -1362,7 +1362,7 @@ the function
 <p>
 The subroutine <code>data_for_extra_profile_columns</code> already has access to
 the star_info pointer, so you can make use of any of the quantities
-defined in <code>$MESA_DIR/star/public/star_data.inc</code>.  This includes <code>s%
+defined in <code>$MESA_DIR/star_data/public/star_data.inc</code>.  This includes <code>s%
 eps_nuc</code> and the <code>s% extra_heat</code> you defined earlier.
 </p>
 
@@ -1397,9 +1397,9 @@ The desired ratio can then be calculated in each zone.
 </div>
 </div>
 
-<div id="outline-container-org77999b1" class="outline-5">
-<h5 id="org77999b1">Bonus Answer</h5>
-<div class="outline-text-5" id="text-org77999b1">
+<div id="outline-container-org8cdf869" class="outline-5">
+<h5 id="org8cdf869">Bonus Answer</h5>
+<div class="outline-text-5" id="text-org8cdf869">
 <p>
 The extra profile column acts just like an included profile column.
 It can easily be included in the PGSTAR plot by adding
@@ -1421,7 +1421,7 @@ we'll learn more about it in Frank's lecture.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Josiah Schwab and Will Schultz</p>
-<p class="date">Created: 2021-08-09 Mon 06:40</p>
+<p class="date">Created: 2021-08-09 Mon 07:12</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
